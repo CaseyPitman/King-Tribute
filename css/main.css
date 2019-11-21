@@ -98,6 +98,121 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+  html{
+    font-family:"Helvetica", sans-serif;
+    font-size:10px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-flow:row wrap;
+  }
+
+  
+  body{
+    background:whitesmoke;
+    max-width:1000px;
+  }
+
+  #main{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-flow:row wrap;
+    background:lightgrey;
+  }
+
+  #title{
+    font-size:4rem;
+    width: 100%;
+    text-align:center;
+    margin:50px auto 5px;
+  }
+
+  #subtitle{
+    font-size:2rem;
+    font-weight:normal;
+    margin:20px auto;
+  }
+
+  #image{
+    display:block;
+    width: 100%;
+    height:auto;
+    margin:auto;
+    max-width:800px;
+  }
+
+  #img-caption{
+    max-width:800px;
+    margin:10px 0;
+    font-size:1.6rem;
+  }
+
+  #tribute-info{
+    width:50%;
+    margin-bottom:20px;
+  }
+
+  #tribute-info h2{
+    font-size:2rem;
+    text-align:center;
+  }
+
+  #tribute-info ul{
+    padding:0;
+    font-size:1.8rem;
+    line-height:1.7em;
+    text-align:justify;
+    list-style:none;
+  }
+
+  #tribute-info ul li{
+    margin:10px auto;
+  }
+
+  blockquote{
+    width:50%;
+    margin:0;
+    border:1px solid black;
+    background:white;
+  }
+
+  #quote {
+    margin:auto;
+    font-size:2rem;
+    padding:10px 15px;
+    background:rgba(48, 165, 159, 0.5);
+  }
+
+  #attribute  {
+    text-align:right;
+  }
+
+  #link {
+    width:100%;
+    text-align:center;
+    font-size:2.5rem;
+    margin:50px auto 100px;
+  }
+
+  #tribute-link {
+    color:rgb(48, 165, 159);
+    text-decoration:none;
+  }
+
+  #tribute-link:visited {
+    color:rgb(255,19,27);
+  }
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -187,17 +302,21 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+@media screen and (max-width:768px) {
+  #subtitle {
+    text-align:center;
+    width:75%;
+  }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+  #main{
+    width:100%;
+  }
+  #tribute-info,
+  blockquote {
+    width:75%;
+    
+  }
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
